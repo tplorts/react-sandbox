@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { Box, Button, Card, Container, Typography } from '@mui/material';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <Container
+      sx={{
+        height: '100vh',
+        display: 'grid',
+        justifyContent: 'center',
+        alignContent: 'center',
+      }}
+    >
+      <Card sx={{ p: 4 }}>
+        <Box
+          sx={{
+            display: 'grid',
+            gap: 2,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Typography>
+            Edit <code>src/App.js</code> and save to reload.
+          </Typography>
+
+          <Button variant="contained">primary</Button>
+          <Button variant="contained" color="secondary">
+            secondary
+          </Button>
+        </Box>
+      </Card>
+    </Container>
   );
 }
 
